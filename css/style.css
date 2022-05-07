@@ -28,3 +28,74 @@ body {
 }
 
 
+/* ====== SignUp Form ====== */
+.signUp-box {
+    position: relative;
+    width: 350px;
+    height: 500px;
+    background-color: #e9edc9;
+    border-radius: 1rem;
+    padding: 40px 40px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)  ,  0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+h1 {
+    font-weight: 900;
+}
+
+.user {
+    margin-top: 50px;
+}
+
+input {
+    width: 90%;
+    height: 30px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #afafaf8a;
+    color: #283618;
+    background-color: #e9edc9;
+    margin-bottom: 25px;
+}
+
+input:focus {
+    border-bottom: 1px solid #afafaf8a;
+}
+
+img {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    color: #283618;
+    vertical-align: -10px;
+}
+
+.signUp-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    height: 40px;
+    color: #e9edc9;
+    background-color: #283618;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)  ,  0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+a {
+    color: #4e5c23;
+}
+
+a:hover {
+    color: #606c38;
+}
