@@ -4,12 +4,11 @@
 
 /* File Content
     General Style
+    SignUp Form
+    Login Form
 */
 
 /* ====== General Style ====== */
-
-    
-
 body {
     box-sizing: border-box;
     padding: 0;
@@ -27,18 +26,7 @@ body {
     flex-direction: column;
 }
 
-
-/* ====== SignUp Form ====== */
-.signUp-box {
-    position: relative;
-    width: 350px;
-    height: 500px;
-    background-color: #e9edc9;
-    border-radius: 1rem;
-    padding: 40px 40px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)  ,  0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
+/* ====== For Both Form ====== */
 h1 {
     font-weight: 900;
 }
@@ -70,14 +58,6 @@ img {
     vertical-align: -10px;
 }
 
-.signUp-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 25px;
-}
-
 .btn {
     display: block;
     width: 100%;
@@ -98,4 +78,62 @@ a {
 
 a:hover {
     color: #606c38;
+}
+
+
+/* ====== SignUp Form ====== */
+.signUp-box {
+    position: relative;
+    width: 350px;
+    height: 500px;
+    background-color: #e9edc9;
+    border-radius: 1rem;
+    padding: 40px 40px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)  ,  0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.signUp-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+
+/* ====== Log In Form ====== */
+.login-box {
+    position: relative;
+    width: 350px;
+    height: 400px;
+    background-color: #e9edc9;
+    border-radius: 1rem;
+    padding: 40px 40px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)  ,  0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.reset-password {
+    color: #848484;
+    text-align: right;
+    margin-top: 0;
+    font-size: 12;
+    cursor: pointer;
+}
+
+.reset-password:hover {
+    color: #bc6c25;
+    text-decoration: underline;
+}
+
+.login-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.login-btn .btn {
+    width: 70%;
+    height: 40px;
 }
