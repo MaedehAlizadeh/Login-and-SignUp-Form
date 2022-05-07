@@ -1,0 +1,30 @@
+/* Template Name : Login & SignUp Form
+    Author Name : Maedeh Alizadeh
+*/
+
+/* File Content
+    General Style
+*/
+
+/* ====== General Style ====== */
+
+    
+
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: #283618;
+    font-family: 'Oswald' , sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 16px;
+    flex-direction: column;
+}
+
+
