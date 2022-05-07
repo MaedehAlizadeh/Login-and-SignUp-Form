@@ -43,7 +43,6 @@ input {
     border-bottom: 1px solid #afafaf8a;
     color: #283618;
     background-color: #e9edc9;
-    margin-bottom: 25px;
 }
 
 input:focus {
@@ -80,6 +79,12 @@ a:hover {
     color: #606c38;
 }
 
+span {
+    color: #e01010;
+    font-size: 14px;
+    display: block;
+    margin: 5px 0 25px 30px;
+}
 
 /* ====== SignUp Form ====== */
 .signUp-box {
@@ -98,6 +103,17 @@ a:hover {
     align-items: center;
     flex-direction: column;
     margin-top: 25px;
+}
+
+/* .username-msg,
+.email-msg,
+.password-msg,
+.passConfirm-msg */
+
+.signup-status {
+    color: #008000;
+    margin: 10px 0 0 0;
+    font-size: 16px;
 }
 
 
