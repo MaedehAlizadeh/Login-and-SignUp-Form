@@ -1,60 +1,58 @@
 //Template Name : SignIn & SignUp Form
 //Author Name : Maedeh Alizadeh
 
-const usernameInput = document.getElementById('username');
-const emailInput = document.getElementById('email');
-const passwordInput = document.getElementById('password');
-const passConfirm = document.getElementById('pass-confirm');
+// signup Event
+const signupUsername = document.getElementById('signupUsername');
+const signupEmail = document.getElementById('signupEmail');
+const signupPassword = document.getElementById('signupPassword');
+const passConfirm = document.getElementById('passConfirm');
 
-const usernameMsg = document.querySelector(".username-msg");
-const emailMsg = document.querySelector(".email-msg");
-const passwordMsg = document.querySelector(".password-msg");
-const passConfirmMsg = document.querySelector(".passConfirm-msg");
+const signupNameMsg = document.querySelector(".signupNameMsg");
+const signupEmailMsg = document.querySelector(".signupEmailMsg");
+const signupPassMsg = document.querySelector(".signupPassMsg");
+const passConfirmMsg = document.querySelector(".passConfirmMsg");
 const signupStatus = document.querySelector(".signup-status");
 
 const signUpBtn = document.querySelector('.btn');
-
-
-
 
 signUpBtn.addEventListener('click' , signUp);
 
 function signUp (event) {
     event.preventDefault();
 
-    usernameMsg.innerText = "";
-    emailMsg.innerText = "";
-    passwordMsg.innerText = "";
+    signupNameMsg.innerText = "";
+    signupEmailMsg.innerText = "";
+    signupPassMsg.innerText = "";
     passConfirmMsg.innerText = "";
 
-    const usernameVal = usernameInput.value;
-    const emailVal = emailInput.value;
-    const passVal = passwordInput.value;
+    const signupNameVal = signupUsername.value;
+    const signupEmailVal = signupEmail.value;
+    const signupPassVal = signupPassword.value;
     const passConVal = passConfirm.value;
     
     let ifSendData = true;
     const emailRegex = RegExp(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/); // for validation email
 
-    if( usernameVal.length === 0){
-        usernameMsg.innerText = "Please enter your name.";
+    if( signupNameVal.length === 0){
+        signupNameMsg.innerText = "Please enter your name.";
         ifSendData = false;
     };
 
     // validation email
-    if ( emailVal.length === 0) {
-        emailMsg.innerText = "Please enter your email.";
+    if ( signupEmailVal.length === 0) {
+        signupEmailMsg.innerText = "Please enter your email.";
         ifSendData = false;
-    }else if ( !emailRegex.test(emailVal) ){
-        emailMsg.innerText = "Please enter your email correctly.";
+    }else if ( !emailRegex.test(signupEmailVal) ){
+        signupEmailMsg.innerText = "Please enter your email correctly.";
         ifSendData = false;
     };
 
     // validation password
-    if (passVal.length === 0) {
-        passwordMsg.innerText = "Enter you password";
+    if (signupPassVal.length === 0) {
+        signupPassMsg.innerText = "Enter you password";
         ifSendData = false;
-    } else if (passVal.length <= 4){
-        passwordMsg.innerText = "Your password is short.";
+    } else if (signupPassVal.length <= 4){
+        signupPassMsg.innerText = "Your password is short.";
         ifSendData = false; 
     };
     
@@ -62,7 +60,7 @@ function signUp (event) {
     if ( passConVal.length === 0 ){
         passConfirmMsg.innerText = "Confirm your password.";
         ifSendData = false;
-    } else if ( !(passVal === passConVal) ){
+    } else if ( !(signupPassVal === passConVal) ){
         passConfirmMsg.innerText = "You entered the password incorrectly.";
         ifSendData = false;
     };
@@ -71,8 +69,8 @@ function signUp (event) {
     // fetch data to fake api
     if( ifSendData ) {
         const body = JSON.stringify({
-            name : usernameVal,
-            email : emailVal,
+            name : signupNameVal,
+            email : signupEmailVal,
             password : passConVal
         });
         const headers = {
@@ -89,4 +87,50 @@ function signUp (event) {
                 }
             });
     };
+
+    signupUsername.value = "";
+    signupEmail.value = "";
+    signupPassword.value = "";
+    passConfirm.value = "";
+};
+
+
+// Login Event
+const logInBtn = document.querySelector('.btn');
+const loginUsername = document.getElementById('loginUsername');
+const loginPass = document.getElementById('loginPass');
+
+const loginNameMsg = document.querySelector('.loginNameMsg');
+const loginPassMsg = document.querySelector('.loginPassMsg');
+
+const loginStatus = document.querySelector(".login-status");
+
+logInBtn.addEventListener('click' , logIn);
+
+function logIn(event) {
+    event.preventDefault();
+
+    loginNameMsg.innerText = "";
+    loginPassMsg.innerText = "";    
+    let ifGetData = true;
+
+    const loginNameVal = loginUsername.value;
+    const loginPassVal = loginPass.value;
+
+    if( loginNameVal.length === 0) {
+        loginNameMsg.innerText = "PLease enter your name."
+        ifGetData = false;
+    };
+
+    if( loginPassVal.length === 0) {
+        loginPassMsg.innerText = "Please enter your password."
+        ifGetData = false;
+    };
+
+    if(ifGetData) {
+        loginStatus.innerText ="You Log In Successfully.";  
+    };
+
+    loginUsername.value = "";
+    loginPass.value = "";
 };

@@ -90,7 +90,7 @@ span {
 .signUp-box {
     position: relative;
     width: 350px;
-    height: 500px;
+    height: 550px;
     background-color: #e9edc9;
     border-radius: 1rem;
     padding: 40px 40px;
@@ -105,11 +105,6 @@ span {
     margin-top: 25px;
 }
 
-/* .username-msg,
-.email-msg,
-.password-msg,
-.passConfirm-msg */
-
 .signup-status {
     color: #008000;
     margin: 10px 0 0 0;
@@ -121,7 +116,7 @@ span {
 .login-box {
     position: relative;
     width: 350px;
-    height: 400px;
+    height: 430px;
     background-color: #e9edc9;
     border-radius: 1rem;
     padding: 40px 40px;
@@ -152,4 +147,10 @@ span {
 .login-btn .btn {
     width: 70%;
     height: 40px;
+}
+
+.login-status {
+    color: #008000;
+    margin: 10px 0 0 0;
+    font-size: 16px;
 }
